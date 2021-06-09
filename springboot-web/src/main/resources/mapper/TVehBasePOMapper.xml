@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gavin.springboot.mapper.TVehBaseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gavin.springboot.po.TVehBasePO">
+        <id column="vin" property="vin" />
+        <result column="keyid" property="keyid" />
+        <result column="type_code" property="typeCode" />
+        <result column="veh_type" property="vehType" />
+        <result column="car_line" property="carLine" />
+        <result column="veh_production_date" property="vehProductionDate" />
+        <result column="veh_color" property="vehColor" />
+        <result column="tbox_serial_num" property="tboxSerialNum" />
+        <result column="btkey_mac_add" property="btkeyMacAdd" />
+        <result column="tbox_part_num" property="tboxPartNum" />
+        <result column="veh_serial_num" property="vehSerialNum" />
+        <result column="veh_part_num" property="vehPartNum" />
+        <result column="dashboard_serial_num" property="dashboardSerialNum" />
+        <result column="dashboard_part_num" property="dashboardPartNum" />
+        <result column="imsi" property="imsi" />
+        <result column="iccid" property="iccid" />
+        <result column="mdn" property="mdn" />
+        <result column="vehicle_style" property="vehicleStyle" />
+        <result column="car_used" property="carUsed" />
+        <result column="terminal_type" property="terminalType" />
+        <result column="terminal_no" property="terminalNo" />
+        <result column="terminal_firm" property="terminalFirm" />
+        <result column="mot_serial_num" property="motSerialNum" />
+        <result column="engine_number" property="engineNumber" />
+        <result column="tccode" property="tccode" />
+        <result column="bat_serial_num" property="batSerialNum" />
+        <result column="bat_package_date" property="batPackageDate" />
+        <result column="car_sale_status" property="carSaleStatus" />
+        <result column="car_out_time" property="carOutTime" />
+        <result column="customer_id" property="customerId" />
+        <result column="customer_name" property="customerName" />
+        <result column="car_no" property="carNo" />
+        <result column="sale_province" property="saleProvince" />
+        <result column="sale_city" property="saleCity" />
+        <result column="sale_county" property="saleCounty" />
+        <result column="sale_date" property="saleDate" />
+        <result column="driver_license_no" property="driverLicenseNo" />
+        <result column="company_addr" property="companyAddr" />
+        <result column="moton_company" property="motonCompany" />
+        <result column="store_addr" property="storeAddr" />
+        <result column="linkman" property="linkman" />
+        <result column="linkphone" property="linkphone" />
+        <result column="legal_person" property="legalPerson" />
+        <result column="legal_pserson_phone" property="legalPsersonPhone" />
+        <result column="veh_charge_addr" property="vehChargeAddr" />
+        <result column="vecode" property="vecode" />
+        <result column="car_status" property="carStatus" />
+        <result column="vvip" property="vvip" />
+        <result column="out_day" property="outDay" />
+        <result column="create_time" property="createTime" />
+        <result column="reporttime_first" property="reporttimeFirst" />
+        <result column="reporttime" property="reporttime" />
+        <result column="china_flag" property="chinaFlag" />
+        <result column="tbox_version" property="tboxVersion" />
+        <result column="last_time" property="lastTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        vin, keyid, type_code, veh_type, car_line, veh_production_date, veh_color, tbox_serial_num, btkey_mac_add, tbox_part_num, veh_serial_num, veh_part_num, dashboard_serial_num, dashboard_part_num, imsi, iccid, mdn, vehicle_style, car_used, terminal_type, terminal_no, terminal_firm, mot_serial_num, engine_number, tccode, bat_serial_num, bat_package_date, car_sale_status, car_out_time, customer_id, customer_name, car_no, sale_province, sale_city, sale_county, sale_date, driver_license_no, company_addr, moton_company, store_addr, linkman, linkphone, legal_person, legal_pserson_phone, veh_charge_addr, vecode, car_status, vvip, out_day, create_time, reporttime_first, reporttime, china_flag, tbox_version, last_time
+    </sql>
+
+</mapper>

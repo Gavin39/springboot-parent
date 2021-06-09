@@ -1,0 +1,13 @@
+
+spring:
+  # 数据源
+  datasource:
+    username: ptjs
+    password: wam9OjdY8Y
+    url: jdbc:mysql://rm-uf6075txq4odlnr00.mysql.rds.aliyuncs.com:3306/aiways_newfuel?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
+  # redis
+  redis:
+    host: r-uf6jrii18sbobslr5t.redis.rds.aliyuncs.com
+    port: 6379
+    password: g49KbDmHguKu7g9s
+    database: 0
