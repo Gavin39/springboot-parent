@@ -1,7 +1,7 @@
 package com.gavin.springboot.service;
 
-import com.gavin.springboot.pojo.po.TVehBasePO;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.gavin.springboot.pojo.po.TVehBasePO;
 import com.gavin.springboot.pojo.vo.TVehBaseVO;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.gavin.springboot.mapper;
 
-import com.gavin.springboot.pojo.po.TVehBasePO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.gavin.springboot.pojo.po.TVehBasePO;
 import org.springframework.stereotype.Repository;
 
 /**
