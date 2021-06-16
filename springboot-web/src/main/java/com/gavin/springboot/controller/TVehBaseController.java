@@ -1,10 +1,8 @@
 package com.gavin.springboot.controller;
 
 
-import com.gavin.springboot.mapper.TVehBaseMapper;
-import com.gavin.springboot.po.TVehBasePO;
+import com.gavin.springboot.pojo.vo.TVehBaseVO;
 import com.gavin.springboot.service.TVehBaseService;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,7 +30,7 @@ public class TVehBaseController {
 
     @ApiOperation("查询所有列表")
     @GetMapping("/selectAll")
-    public List<TVehBasePO> selectAll() {
+    public List<TVehBaseVO> selectAll() {
         return tVehBaseService.selectAll();
     }
 

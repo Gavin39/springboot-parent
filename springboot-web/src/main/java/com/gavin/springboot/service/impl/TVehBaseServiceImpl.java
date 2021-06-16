@@ -1,7 +1,9 @@
 package com.gavin.springboot.service.impl;
 
-import com.gavin.springboot.po.TVehBasePO;
+import com.gavin.springboot.helper.BeanHelper;
+import com.gavin.springboot.pojo.po.TVehBasePO;
 import com.gavin.springboot.mapper.TVehBaseMapper;
+import com.gavin.springboot.pojo.vo.TVehBaseVO;
 import com.gavin.springboot.service.TVehBaseService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +26,9 @@ public class TVehBaseServiceImpl extends ServiceImpl<TVehBaseMapper, TVehBasePO>
     private TVehBaseMapper tVehBaseMapper;
 
 
-    public List<TVehBasePO> selectAll() {
-        return tVehBaseMapper.selectList(null);
+    public List<TVehBaseVO> selectAll() {
+        List<TVehBasePO> tVehBasePOS = tVehBaseMapper.selectList(null);
+        return BeanHelper.copyWithCollection(tVehBasePOS, TVehBaseVO.class);
     }
 
 }

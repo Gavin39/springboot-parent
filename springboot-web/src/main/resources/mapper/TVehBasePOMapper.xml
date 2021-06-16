@@ -3,7 +3,7 @@
 <mapper namespace="com.gavin.springboot.mapper.TVehBaseMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.gavin.springboot.po.TVehBasePO">
+    <resultMap id="BaseResultMap" type="com.gavin.springboot.pojo.po.TVehBasePO">
         <id column="vin" property="vin" />
         <result column="keyid" property="keyid" />
         <result column="type_code" property="typeCode" />

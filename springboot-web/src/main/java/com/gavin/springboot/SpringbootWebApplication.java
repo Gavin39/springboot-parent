@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @MapperScan("com.gavin.springboot.mapper")
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.gavin.springboot"})
 public class SpringbootWebApplication {
 
     public static void main(String[] args) {

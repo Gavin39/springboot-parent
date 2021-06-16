@@ -74,7 +74,7 @@ public class MybatisAutoGenerator {
         // 进行包名的策略配置
         PackageConfig packageConfig = new PackageConfig();
         packageConfig.setParent(PACKAGE_NAME)
-                .setEntity("po");
+                .setEntity("pojo/po");
 
         // 自定义配置
         InjectionConfig cfg = new InjectionConfig() {
