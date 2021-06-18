@@ -61,7 +61,7 @@ public final class JsonHelper {
      * @param <B>
      * @return
      */
-    public static <B> B toBean(String json, Class<B> cls) {
+    public static <B> B toObject(String json, Class<B> cls) {
 
         B bean = null;
         try {

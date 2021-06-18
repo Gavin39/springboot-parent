@@ -3,10 +3,9 @@ package com.gavin.springboot.helper;
 
 import com.gavin.springboot.exception.HelperException;
 import lombok.extern.slf4j.Slf4j;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import org.springframework.util.CollectionUtils;
+
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -45,32 +44,6 @@ public final class BeanHelper {
             log.error("[copyProperties] data convert fail，target Object {} construct exception ", target.getName(), e);
             throw new HelperException(BEAN_PROCESS_ERROR);
         }
-    }
-
-    /**
-     * 通过json序列化将原对象list装换成目标类型的实例list
-     * <p>
-     * Replace the original object list with the target type instance list through json serialization
-     * <p>
-     * {@link JsonHelper#toJson(Object)}
-     * {@link JsonHelper#toBean(String, Class)}
-     *
-     * @param source
-     * @param target
-     * @param <T>
-     * @return
-     */
-    public static <T> List<T> toBeans(List<?> source, Class<T> target) {
-
-        List<T> list = new ArrayList<>();
-        for (Object o : source) {
-
-            T t = JsonHelper.toBean(JsonHelper.toJson(o), target);
-            list.add(t);
-        }
-
-        source.clear();
-        return list;
     }
 
 
@@ -137,4 +110,37 @@ public final class BeanHelper {
             throw new HelperException(BEAN_PROCESS_ERROR);
         }
     }
+
+    /**
+     * json方式copy对象
+     *
+     * @param source
+     * @param target
+     * @param <T>
+     * @return
+     */
+    public static <T> T copyPropertiesByJson(Object source, Class<T> target) {
+        if(Objects.isNull(source)) {
+            return null;
+        }
+        return JsonHelper.toObject(JsonHelper.toJson(source), target);
+    }
+
+    /**
+     * json方式copy list
+     *
+     * @param source
+     * @param target
+     * @param <T>
+     * @return
+     */
+    public static <T> List<T> copyListPropertiesByJson(List<?> source, Class<T> target) {
+        if(CollectionUtils.isEmpty(source)) {
+            return Collections.emptyList();
+        }
+        return source.stream()
+                .map(obj -> copyPropertiesByJson(obj, target))
+                .collect(Collectors.toList());
+    }
+
 }
